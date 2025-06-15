@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WrightAlignment | Sports Massage SE London</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #F4F4F4;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    a { color: #FFD700; text-decoration: none; }
+    a:hover, a:focus { text-decoration: underline; }
+
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('https://images.unsplash.com/photo-1598970434795-0c54fe7c0642?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      color: #fff;
+      padding: 90px 20px 70px;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #264653;
+      background: #fff;
+      display: inline-block;
+      padding: 6px 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      font-size: 3.4rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+    header p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+
+    .cta-button {
+      background-color: #FFD700;
+      color: #003366;
+      font-weight: 700;
+      padding: 14px 26px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .cta-button:hover {
+      background-color: #e6c200;
+      transform: scale(1.05);
+    }
+
+    nav {
+      background-color: #003366;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 12px 10px;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin: 0;
+    }
+    nav li { font-weight: 600; font-size: 1.1rem; }
+    nav a {
+      color: white;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #FFD700;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px 50px;
+    }
+
+    section {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+      padding: 40px 30px;
+      margin-bottom: 50px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+
+    section.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section h2 {
+      color: #003366;
+      font-size: 2.8rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    ul.service-list,
+    ul.benefits-list {
+      padding-left: 20px;
+      font-size: 1.15rem;
+    }
+    ul li {
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+      font-size: 1rem;
+    }
+    form input:focus,
+    form textarea:focus {
+      border-color: #264653;
+      outline: none;
+      box-shadow: 0 0 6px rgba(38, 70, 83, 0.6);
+    }
+    form button {
+      background-color: #264653;
+      color: white;
+      padding: 16px 30px;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      display: block;
+    }
+    form button:hover { background-color: #1b3732; }
+
+    .contact-info {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    .contact-info a {
+      color: #264653;
+      font-weight: 600;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.95rem;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      min-height: 650px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">WrightAlignment</div>
+    <h1>Sports Massage Therapy</h1>
+    <p>Helping you recover, perform, and feel your best – SE London</p>
+    <a href="#contact" class="cta-button">Book Your Session</a>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#benefits">Benefits</a></li>
+      <li><a href="#qualifications">Qualifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#booking">Booking</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="about">
+      <h2>About WrightAlignment</h2>
+      <p>Hi, I'm Harry – a qualified sports massage therapist based in SE London. At WrightAlignment, I help athletes and active individuals reduce pain, recover from injury, and improve mobility. My services include traditional sports massage, IASTM (Instrument Assisted Soft Tissue Mobilization), and dry cupping therapy.</p>
+      <p>With a BSc in Biology and currently studying for a Master of Osteopathy (M.Ost), I blend science and experience to deliver effective, tailored treatments. I also offer convenient mobile massage services throughout SE London.</p>
+    </section>
+
+    <section id="services">
+      <h2>Services & Pricing</h2>
+      <ul class="service-list">
+        <li><strong>Sports Massage (Clinic)</strong> – £60 for 60 minutes</li>
+        <li><strong>Sports Massage (Mobile)</strong> – £80 for 60 minutes</li>
+        <li><strong>Sports Massage (Short Session)</strong> – £30 for 30 minutes</li>
+        <li><strong>IASTM Treatments</strong> – Included upon request</li>
+        <li><strong>Dry Cupping</strong> – Included upon request</li>
+      </ul>
+      <p>All treatments are tailored to your needs. Whether it's post-training recovery, injury management, or regular maintenance – you're in the right hands. Mobile therapy allows flexibility and convenience wherever you are in SE London.</p>
+    </section>
+
+    <section id="benefits">
+      <h2>Benefits of Sports Massage & IASTM</h2>
+      <ul class="benefits-list">
+        <li>Reduces muscle tension and stiffness</li>
+        <li>Improves blood circulation and lymphatic drainage</li>
+        <li>Enhances flexibility and range of motion</li>
+        <li>Speeds up recovery after injury or intense training</li>
+        <li>Helps prevent injuries by addressing muscular imbalances</li>
+        <li>Reduces stress and promotes relaxation</li>
+      </ul>
+
+      <h3>IASTM & Cupping Benefits</h3>
+      <ul class="benefits-list">
+        <li>Breaks down scar tissue and adhesions</li>
+        <li>Stimulates soft tissue healing response</li>
+        <li>Improves mobility and function</li>
+        <li>Helps manage chronic issues like tendonitis</li>
+        <li>Increases circulation via suction techniques (Cupping)</li>
+      </ul>
+    </section>
+
+    <section id="qualifications">
+      <h2>My Qualifications</h2>
+      <ul class="service-list">
+        <li><strong>BSc Biology</strong> – University (2018)</li>
+        <li><strong>ITEC Level 3 Diploma in Sports Massage</strong> (2024)</li>
+        <li><strong>CPD: IASTM (Instrument Assisted Soft Tissue Mobilisation)</strong> (2025)</li>
+        <li><strong>CPD: Cupping Massage Course</strong> (2025)</li>
+        <li><strong>M.Ost (Master of Osteopathy)</strong> – Ongoing</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact & Booking</h2>
+      <p>Use the form below to get in touch or book a session. I’ll reply within 24 hours.</p>
+      <form action="https://formsubmit.co/wrightalignment@gmail.com" method="POST">
+        <input type="hidden" name="_next" value="thank-you.html">
+        <input type="hidden" name="_captcha" value="false">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-info">
+        <p>📧 Email: <a href="mailto:Wrightalignment@gmail.com">Wrightalignment@gmail.com</a></p>
+        <p>📍 Based in SE London</p>
+      </div>
+    </section>
+
+    <section id="booking">
+      <h2>Book a Session Online</h2>
+      <iframe src="https://calendly.com/wrightalignment/60min" frameborder="0"></iframe>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 WrightAlignment | Designed by Harry Wright</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+</body>
+</html>
